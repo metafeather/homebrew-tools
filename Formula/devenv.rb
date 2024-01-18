@@ -10,7 +10,7 @@ class Devenv < Formula
   url "file:///dev/null"
   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
-  depends_on "metafeather/tools/devenv@0.2.0-rc"
+  depends_on "metafeather/tools/devenv@1.0.0-rc"
 
   def install
     (bin + "devenv.versions").write <<~EOS
