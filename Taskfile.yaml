@@ -1,0 +1,18 @@
+version: 3
+
+tasks:
+  default: task --list-all
+
+  env: env | sort
+
+  install:
+    - brew install metafeather/tools/devenv
+
+  update:
+    - brew update
+
+  clean:
+    - brew uninstall metafeather/tools/devenv
+    - brew autoremove
+    - brew untap metafeather/tools
+    - brew cleanup --prune=all
