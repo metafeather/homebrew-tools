@@ -5,7 +5,7 @@
 class DevenvAT110Rc < Formula
   desc ""
   homepage ""
-  version "1.1.0-devenv.2+goreleaser"
+  version "1.1.0-devenv.3+goreleaser"
 
   depends_on "direnv"
   depends_on "eget"
@@ -13,16 +13,16 @@ class DevenvAT110Rc < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.2+goreleaser/devenv_darwin_arm64.tar.gz"
-      sha256 "b7b85a6684424a8f6b8660233fb90a475a42f235e5318b9f740b72f74b578348"
+      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.3+goreleaser/devenv_darwin_arm64.tar.gz"
+      sha256 "61e596a596d32dc8c371e0f82f52a65b7546374b399b6dec0d45ad71893c7c70"
 
       def install
         bin.install "devenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.2+goreleaser/devenv_darwin_amd64.tar.gz"
-      sha256 "35b301a54e058eb5bf86aa1bb6f9a48558e0ebba97b93c9e9dae236c534169b7"
+      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.3+goreleaser/devenv_darwin_amd64.tar.gz"
+      sha256 "6598edc609b0d80bfd57875db757ca643a56f1ab39ad6f4a1c92285befd0f40f"
 
       def install
         bin.install "devenv"
@@ -32,16 +32,16 @@ class DevenvAT110Rc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.2+goreleaser/devenv_linux_arm64.tar.gz"
-      sha256 "6960daf0148ecdf6d02ddb0845ea3e085048ef2a5b08ee9533f3e745ac2fb4b3"
+      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.3+goreleaser/devenv_linux_arm64.tar.gz"
+      sha256 "2660daf62020ba284762b0df5bbd2a520f90396e6727fb1e2ebca684e1b11d51"
 
       def install
         bin.install "devenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.2+goreleaser/devenv_linux_amd64.tar.gz"
-      sha256 "f03c47e494706bb9cc6d0f3bc8a9805364c7929ef1c1979dcb048cc8d88cd7e5"
+      url "https://github.com/metafeather/tools/releases/download/v1.1.0-devenv.3+goreleaser/devenv_linux_amd64.tar.gz"
+      sha256 "579e21251de68664a151234a0a2e792188598c28d1d2014bcd5a4f7b73991ad2"
 
       def install
         bin.install "devenv"
