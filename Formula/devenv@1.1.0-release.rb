@@ -1,0 +1,50 @@
+# typed: false
+# frozen_string_literal: true
+
+class DevenvAT110Release < Formula
+  desc ""
+  homepage ""
+  version "1.1.0"
+
+  depends_on "direnv"
+  depends_on "eget"
+  depends_on "go-task"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/metafeather/tools/releases/download/devenv%2Fv1.1.0/devenv_darwin_arm64.tar.gz"
+      sha256 "67bcfd49e25859ff94e535228620d53f5af21d9f94eaf1234bb04e71c06670a2"
+
+      def install
+        bin.install "devenv"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/metafeather/tools/releases/download/devenv%2Fv1.1.0/devenv_darwin_amd64.tar.gz"
+      sha256 "4e0c8280ccb1948c005e2c746a3b1dabf9bb23daafc086ec182d999fa5fd233c"
+
+      def install
+        bin.install "devenv"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/metafeather/tools/releases/download/devenv%2Fv1.1.0/devenv_linux_arm64.tar.gz"
+      sha256 "3a6a716118c18e2d40f75290ecdbc771357f92274a71e3d4f1f9d21c3126c3cb"
+
+      def install
+        bin.install "devenv"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/metafeather/tools/releases/download/devenv%2Fv1.1.0/devenv_linux_amd64.tar.gz"
+      sha256 "86763dbb6e5abd566b79c7efae3428aa562dceb085216561962b74503c80b6cd"
+
+      def install
+        bin.install "devenv"
+      end
+    end
+  end
+end
